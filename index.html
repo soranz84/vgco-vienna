@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VGCO &mdash; Vienna Ground-Change Observatory</title>
+<style>
+ body {font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#eef1f4;
+        margin:0;color:#16323f}
+ .w {max-width:1080px;margin:0 auto;padding:34px 20px 70px}
+ h1 {margin:0 0 6px;font-size:25px;letter-spacing:-.3px}
+ p.lead {color:#4a5760;font-size:14px;line-height:1.6;margin:0 0 22px;max-width:780px}
+ .g {display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+ .g a {display:block;background:#fff;border:1px solid #dbe1e6;border-radius:12px;
+        padding:16px 18px;text-decoration:none;color:#16323f;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+ .g a.primary {border-color:#0f5c73;box-shadow:0 3px 12px rgba(15,92,115,.13)}
+ .g a b {display:block;font-size:16px;margin-bottom:5px}
+ .g a span {color:#4a5760;font-size:12.5px;line-height:1.55}
+ .app {background:#16323f;color:#fff;border-radius:12px;padding:16px 18px;margin:0 0 14px}
+ .app b {font-size:16px}
+ .app p {margin:6px 0 0;font-size:13px;line-height:1.6;color:#d7e3e9}
+ .app code {background:rgba(255,255,255,.14);padding:2px 7px;border-radius:4px}
+ .f {margin-top:26px;font-size:12px;color:#7b8892;line-height:1.6}
+</style></head><body><div class="w">
+<h1>VGCO &mdash; Vienna Ground-Change Observatory</h1>
+<p class="lead">A motion-aware, geotechnically contextualised observatory of
+construction sites in Vienna, built from official footprints, Vienna's
+orthophoto (2014&ndash;2025), Sentinel-2 (2015&ndash;2026), Sentinel-1 and the
+EGMS InSAR motion field. Every number carries its measured accuracy and its
+coverage.</p>
+
+<div class="app"><b>The interactive product is one web app</b>
+<p>Run <code>streamlit run app.py</code> and it opens with two tabs:
+<b>Label</b> (the site map, the orthophoto carousel and the annotation form)
+and <b>Candidates</b> (the detector's work-list, also labelable); the
+<b>Market</b> dashboard is the second view. The pages below are the static
+twin, so the same evidence can be read without a server.</p></div>
+
+<div class="g"><a href="site_map.html" class="primary"><b>Site map</b><span>Every labelled construction site with its official enrichment, the geotechnical context, the 12-vintage orthophoto carousel, the Sentinel-1 radar disturbance, the EGMS InSAR motion field and each site's displacement time series.</span></a><a href="market_dashboard.html"><b>Market dashboard</b><span>Building-footprint area of construction activity per district and year, from the orthophoto and from Sentinel-2, with the accuracy statement on the face of it.</span></a><a href="waehring_gate_review.html"><b>The Währing gate review</b><span>The stratified sample the human labels to measure the recall half of the out-of-sample scaling gate (a working tool, not a product).</span></a><a href="disputed_cases.jpg"><b>The disputed cases</b><span>The orthophoto readings that disagree with the official construction year, side by side.</span></a></div>
+
+<p class="f">The paper figure (motion_overview.png) is kept for the manuscript and is linked
+from the app. The pilot AOI is 14.58&nbsp;km&sup2; in Hernals and six
+neighbouring districts; the method is validated on a disjoint patch in
+Brigittenau/Floridsdorf/Donaustadt and against official BAUJAHR records.
+This is a pilot, not a city product.</p>
+</div></body></html>

@@ -1,0 +1,36 @@
+# Ask Apache to drop the site-wide Content-Security-Policy for this directory.
+#
+# The page is a self-contained folium/Leaflet map that needs:
+#   * four library scripts from CDNs          -> blocked by  script-src 'self'
+#   * six library stylesheets from CDNs        -> blocked by  style-src  'self'
+#   * five inline <script> blocks              -> blocked (no 'unsafe-inline')
+#   * 3,337 inline style="..." attributes      -> blocked (no 'unsafe-inline')
+#   * basemap tiles from maps.wien.gv.at       -> blocked by  img-src    'self'
+#
+# Only UNSETTING the header helps. Adding a second, looser CSP header does not:
+# when a response carries several policies the browser enforces the intersection,
+# so a permissive copy alongside the restrictive one changes nothing.
+
+<IfModule mod_headers.c>
+    # both forms are needed: "always" covers error responses, the bare form
+    # covers normal ones, and which of the two reaches the client depends on
+    # where in the request cycle the original header is added.
+    Header always unset Content-Security-Policy
+    Header unset Content-Security-Policy
+    Header always unset Content-Security-Policy-Report-Only
+    Header unset Content-Security-Policy-Report-Only
+</IfModule>
+
+# The bundle is static and versioned by filename; let the browser keep images.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png  "access plus 30 days"
+    ExpiresByType text/html  "access plus 1 hour"
+</IfModule>
+
+# Correct types even if the server default is odd.
+<IfModule mod_mime.c>
+    AddType image/jpeg .jpg .jpeg
+    AddType image/png  .png
+</IfModule>
