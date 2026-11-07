@@ -1,0 +1,171 @@
+<!doctype html><meta charset="utf-8">
+<title>VGCO city market — Vienna</title>
+<style>
+:root{--bg:#f6f8f9;--card:#fff;--ink:#12232e;--mut:#5a6b76;--line:#dfe6ea}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 Inter,'Segoe UI',Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:26px 20px 70px}
+.nav{display:flex;gap:7px;margin:0 0 18px}
+.nav a{font-size:12.5px;padding:6px 13px;border-radius:20px;text-decoration:none;
+background:#fff;border:1px solid var(--line);color:#0f5c73}
+.nav a.on{background:#0f5c73;color:#fff}
+h1{font-size:25px;margin:0 0 4px}
+h2{font-size:17px;margin:30px 0 10px}
+.sub{color:var(--mut);max-width:900px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 18px;margin:12px 0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:14px 0}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:#fff;border:1px solid var(--line);border-left:4px solid #0f5c73;
+border-radius:10px;padding:13px 14px}
+.kv{font-size:26px;font-weight:700;letter-spacing:-.6px}
+.kl{font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--mut)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+.warn{border-left:4px solid #c0392b;background:#fdf3f2;padding:11px 14px;border-radius:6px}
+.lg{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0;font-size:11.5px;color:var(--mut)}
+.lg i{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:5px}
+</style>
+<div class="wrap">
+<div class="nav"><a href="site_map.html">Site map</a>
+<a href="city_map.html">City map</a>
+<a class="on" href="city_market.html">City market</a>
+<a href="market_dashboard.html">Pilot market</a></div>
+<h1>Construction activity across Vienna</h1>
+<p class="sub">Every district was built with the same frozen Sentinel-2 detector,
+the same sixty-five monthly composites and the same footprint unit. The numbers
+are detections, not a census: the stratified labels in ten districts put
+precision between zero and one hundred per cent and completeness between zero
+and twenty-one per cent, so read the city totals as a floor.</p>
+<div class="kpis"><div class="kpi"><div class="kv">22</div><div class="kl">districts built</div></div><div class="kpi"><div class="kv">15,618</div><div class="kl">detections</div></div><div class="kpi"><div class="kv">4.84 km²</div><div class="kl">detected footprint area</div></div><div class="kpi"><div class="kv">6,595</div><div class="kl">busiest: Donaustadt</div></div></div>
+<h2>Detections by year</h2>
+<div class="card"><svg viewBox="0 0 1100 380" width="100%" style="max-width:1100px" xmlns="http://www.w3.org/2000/svg" font-family="Inter,'Segoe UI',Helvetica,Arial,sans-serif">
+<text x="62" y="18" font-size="14.5" font-weight="600" fill="#12232e">Detections per year, stacked by district</text>
+<line x1="62" y1="334.0" x2="1086" y2="334.0" stroke="#e6ecef"/>
+<text x="54" y="338.0" font-size="10.5" text-anchor="end" fill="#5a6b76">0</text>
+<line x1="62" y1="260.5" x2="1086" y2="260.5" stroke="#e6ecef"/>
+<text x="54" y="264.5" font-size="10.5" text-anchor="end" fill="#5a6b76">1300</text>
+<line x1="62" y1="187.0" x2="1086" y2="187.0" stroke="#e6ecef"/>
+<text x="54" y="191.0" font-size="10.5" text-anchor="end" fill="#5a6b76">2600</text>
+<line x1="62" y1="113.5" x2="1086" y2="113.5" stroke="#e6ecef"/>
+<text x="54" y="117.5" font-size="10.5" text-anchor="end" fill="#5a6b76">3900</text>
+<line x1="62" y1="40.0" x2="1086" y2="40.0" stroke="#e6ecef"/>
+<text x="54" y="44.0" font-size="10.5" text-anchor="end" fill="#5a6b76">5200</text>
+<rect x="77.8" y="156.9" width="61.4" height="177.1" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2016: 3133</title></rect>
+<rect x="77.8" y="129.7" width="61.4" height="27.2" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2016: 481</title></rect>
+<rect x="77.8" y="94.6" width="61.4" height="35.1" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2016: 621</title></rect>
+<rect x="77.8" y="78.1" width="61.4" height="16.5" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2016: 291</title></rect>
+<rect x="77.8" y="63.5" width="61.4" height="14.6" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2016: 259</title></rect>
+<rect x="77.8" y="57.8" width="61.4" height="5.7" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2016: 100</title></rect>
+<rect x="77.8" y="53.5" width="61.4" height="4.4" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2016: 77</title></rect>
+<rect x="77.8" y="41.8" width="61.4" height="11.7" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2016: 207</title></rect>
+<text x="108.5" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2016</text>
+<rect x="170.9" y="312.1" width="61.4" height="21.9" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2017: 388</title></rect>
+<rect x="170.9" y="302.3" width="61.4" height="9.7" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2017: 172</title></rect>
+<rect x="170.9" y="296.8" width="61.4" height="5.5" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2017: 98</title></rect>
+<rect x="170.9" y="287.9" width="61.4" height="8.9" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2017: 158</title></rect>
+<rect x="170.9" y="283.1" width="61.4" height="4.8" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2017: 85</title></rect>
+<rect x="170.9" y="281.1" width="61.4" height="2.0" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2017: 35</title></rect>
+<rect x="170.9" y="277.1" width="61.4" height="4.0" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2017: 71</title></rect>
+<rect x="170.9" y="274.6" width="61.4" height="2.4" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2017: 43</title></rect>
+<text x="201.6" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2017</text>
+<rect x="264.0" y="282.6" width="61.4" height="51.4" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2018: 909</title></rect>
+<rect x="264.0" y="265.1" width="61.4" height="17.5" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2018: 310</title></rect>
+<rect x="264.0" y="256.0" width="61.4" height="9.1" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2018: 161</title></rect>
+<rect x="264.0" y="249.2" width="61.4" height="6.8" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2018: 120</title></rect>
+<rect x="264.0" y="241.4" width="61.4" height="7.8" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2018: 138</title></rect>
+<rect x="264.0" y="236.9" width="61.4" height="4.5" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2018: 80</title></rect>
+<rect x="264.0" y="234.0" width="61.4" height="2.8" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2018: 50</title></rect>
+<rect x="264.0" y="226.3" width="61.4" height="7.7" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2018: 137</title></rect>
+<text x="294.7" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2018</text>
+<rect x="357.1" y="321.1" width="61.4" height="12.9" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2019: 228</title></rect>
+<rect x="357.1" y="301.8" width="61.4" height="19.3" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2019: 342</title></rect>
+<rect x="357.1" y="296.7" width="61.4" height="5.0" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2019: 89</title></rect>
+<rect x="357.1" y="289.8" width="61.4" height="7.0" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2019: 123</title></rect>
+<rect x="357.1" y="286.6" width="61.4" height="3.2" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2019: 57</title></rect>
+<rect x="357.1" y="282.6" width="61.4" height="4.0" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2019: 71</title></rect>
+<rect x="357.1" y="280.1" width="61.4" height="2.4" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2019: 43</title></rect>
+<rect x="357.1" y="277.3" width="61.4" height="2.8" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2019: 49</title></rect>
+<text x="387.8" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2019</text>
+<rect x="450.2" y="302.9" width="61.4" height="31.1" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2020: 550</title></rect>
+<rect x="450.2" y="293.3" width="61.4" height="9.6" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2020: 169</title></rect>
+<rect x="450.2" y="287.1" width="61.4" height="6.2" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2020: 110</title></rect>
+<rect x="450.2" y="281.5" width="61.4" height="5.7" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2020: 100</title></rect>
+<rect x="450.2" y="278.3" width="61.4" height="3.2" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2020: 57</title></rect>
+<rect x="450.2" y="270.8" width="61.4" height="7.5" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2020: 132</title></rect>
+<rect x="450.2" y="264.6" width="61.4" height="6.2" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2020: 110</title></rect>
+<rect x="450.2" y="261.6" width="61.4" height="2.9" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2020: 52</title></rect>
+<text x="480.9" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2020</text>
+<rect x="543.3" y="314.9" width="61.4" height="19.1" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2021: 337</title></rect>
+<rect x="543.3" y="308.3" width="61.4" height="6.6" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2021: 117</title></rect>
+<rect x="543.3" y="301.7" width="61.4" height="6.6" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2021: 117</title></rect>
+<rect x="543.3" y="296.6" width="61.4" height="5.1" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2021: 91</title></rect>
+<rect x="543.3" y="292.2" width="61.4" height="4.4" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2021: 78</title></rect>
+<rect x="543.3" y="286.3" width="61.4" height="5.9" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2021: 104</title></rect>
+<rect x="543.3" y="278.9" width="61.4" height="7.3" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2021: 130</title></rect>
+<rect x="543.3" y="277.2" width="61.4" height="1.8" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2021: 31</title></rect>
+<text x="574.0" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2021</text>
+<rect x="636.4" y="306.8" width="61.4" height="27.2" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2022: 481</title></rect>
+<rect x="636.4" y="302.5" width="61.4" height="4.4" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2022: 77</title></rect>
+<rect x="636.4" y="300.0" width="61.4" height="2.5" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2022: 44</title></rect>
+<rect x="636.4" y="294.7" width="61.4" height="5.3" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2022: 93</title></rect>
+<rect x="636.4" y="293.2" width="61.4" height="1.5" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2022: 27</title></rect>
+<rect x="636.4" y="288.2" width="61.4" height="5.0" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2022: 88</title></rect>
+<rect x="636.4" y="284.2" width="61.4" height="4.0" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2022: 70</title></rect>
+<rect x="636.4" y="282.6" width="61.4" height="1.6" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2022: 29</title></rect>
+<text x="667.1" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2022</text>
+<rect x="729.5" y="316.7" width="61.4" height="17.3" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2023: 306</title></rect>
+<rect x="729.5" y="310.3" width="61.4" height="6.4" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2023: 113</title></rect>
+<rect x="729.5" y="306.5" width="61.4" height="3.8" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2023: 67</title></rect>
+<rect x="729.5" y="302.1" width="61.4" height="4.5" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2023: 79</title></rect>
+<rect x="729.5" y="299.7" width="61.4" height="2.4" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2023: 42</title></rect>
+<rect x="729.5" y="297.7" width="61.4" height="2.0" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2023: 35</title></rect>
+<rect x="729.5" y="295.7" width="61.4" height="2.0" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2023: 35</title></rect>
+<rect x="729.5" y="294.7" width="61.4" height="1.0" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2023: 18</title></rect>
+<text x="760.2" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2023</text>
+<rect x="822.6" y="323.1" width="61.4" height="10.9" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2024: 192</title></rect>
+<rect x="822.6" y="320.2" width="61.4" height="2.9" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2024: 52</title></rect>
+<rect x="822.6" y="318.9" width="61.4" height="1.3" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2024: 23</title></rect>
+<rect x="822.6" y="317.4" width="61.4" height="1.5" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2024: 26</title></rect>
+<rect x="822.6" y="316.0" width="61.4" height="1.4" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2024: 25</title></rect>
+<rect x="822.6" y="314.1" width="61.4" height="1.9" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2024: 34</title></rect>
+<rect x="822.6" y="312.6" width="61.4" height="1.5" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2024: 27</title></rect>
+<rect x="822.6" y="311.8" width="61.4" height="0.7" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2024: 13</title></rect>
+<text x="853.3" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2024</text>
+<rect x="915.6" y="330.0" width="61.4" height="4.0" rx="2" fill="#0f5c73" fill-opacity="0.9"><title>Donaustadt 2025: 71</title></rect>
+<rect x="915.6" y="328.1" width="61.4" height="1.9" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2025: 33</title></rect>
+<rect x="915.6" y="326.0" width="61.4" height="2.1" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2025: 37</title></rect>
+<rect x="915.6" y="323.0" width="61.4" height="3.0" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2025: 53</title></rect>
+<rect x="915.6" y="321.4" width="61.4" height="1.6" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2025: 28</title></rect>
+<rect x="915.6" y="320.1" width="61.4" height="1.3" rx="2" fill="#3f8f9e" fill-opacity="0.9"><title>Döbling 2025: 23</title></rect>
+<rect x="915.6" y="319.0" width="61.4" height="1.1" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2025: 20</title></rect>
+<rect x="915.6" y="318.7" width="61.4" height="0.3" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2025: 5</title></rect>
+<text x="946.4" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2025</text>
+<rect x="1008.7" y="331.5" width="61.4" height="2.5" rx="2" fill="#e07b39" fill-opacity="0.9"><title>Floridsdorf 2026: 44</title></rect>
+<rect x="1008.7" y="329.7" width="61.4" height="1.8" rx="2" fill="#2f9e6e" fill-opacity="0.9"><title>Simmering 2026: 32</title></rect>
+<rect x="1008.7" y="328.0" width="61.4" height="1.8" rx="2" fill="#b4508a" fill-opacity="0.9"><title>Liesing 2026: 31</title></rect>
+<rect x="1008.7" y="326.6" width="61.4" height="1.3" rx="2" fill="#7a8c3f" fill-opacity="0.9"><title>Favoriten 2026: 23</title></rect>
+<rect x="1008.7" y="325.1" width="61.4" height="1.6" rx="2" fill="#a0662f" fill-opacity="0.9"><title>Penzing 2026: 28</title></rect>
+<rect x="1008.7" y="324.9" width="61.4" height="0.2" rx="2" fill="#6b6b6b" fill-opacity="0.9"><title>Leopoldstadt 2026: 3</title></rect>
+<text x="1039.5" y="351" font-size="10.5" text-anchor="middle" fill="#5a6b76">2026</text>
+<line x1="62" y1="334" x2="1086" y2="334" stroke="#9aa8b2"/>
+</svg>
+<div class="lg"><span><i style="background:#0f5c73"></i>Donaustadt</span><span><i style="background:#e07b39"></i>Floridsdorf</span><span><i style="background:#2f9e6e"></i>Simmering</span><span><i style="background:#b4508a"></i>Liesing</span><span><i style="background:#7a8c3f"></i>Favoriten</span><span><i style="background:#3f8f9e"></i>Döbling</span><span><i style="background:#a0662f"></i>Penzing</span><span><i style="background:#6b6b6b"></i>Leopoldstadt</span></div>
+<div class="sub" style="font-size:12px">The eight busiest districts are drawn
+separately and the rest are omitted from the stack, so the bars understate the
+city total; the table below is complete.</div></div>
+<h2>Every district</h2>
+<div class="card"><table>
+<thead><tr><th>No.</th><th>District</th><th>km²</th><th>Detections</th>
+<th>Detected area (1,000 m²)</th><th>False-positive rate (%)</th></tr></thead>
+<tbody><tr><td>1</td><td>Innere Stadt</td><td class='n'>2.87</td><td class='n'>37</td><td class='n'>42</td><td class='n'>0.83</td></tr><tr><td>2</td><td>Leopoldstadt</td><td class='n'>19.24</td><td class='n'>587</td><td class='n'>358</td><td class='n'>3.10</td></tr><tr><td>3</td><td>Landstraße</td><td class='n'>7.40</td><td class='n'>244</td><td class='n'>120</td><td class='n'>1.30</td></tr><tr><td>4</td><td>Wieden</td><td class='n'>1.78</td><td class='n'>37</td><td class='n'>17</td><td class='n'>0.82</td></tr><tr><td>5</td><td>Margareten</td><td class='n'>2.01</td><td class='n'>32</td><td class='n'>15</td><td class='n'>0.53</td></tr><tr><td>6</td><td>Mariahilf</td><td class='n'>1.46</td><td class='n'>29</td><td class='n'>8</td><td class='n'>0.61</td></tr><tr><td>7</td><td>Neubau</td><td class='n'>1.61</td><td class='n'>22</td><td class='n'>13</td><td class='n'>0.37</td></tr><tr><td>8</td><td>Josefstadt</td><td class='n'>1.09</td><td class='n'>13</td><td class='n'>4</td><td class='n'>0.30</td></tr><tr><td>9</td><td>Alsergrund</td><td class='n'>2.97</td><td class='n'>71</td><td class='n'>49</td><td class='n'>0.84</td></tr><tr><td>10</td><td>Favoriten</td><td class='n'>31.82</td><td class='n'>819</td><td class='n'>313</td><td class='n'>1.84</td></tr><tr><td>11</td><td>Simmering</td><td class='n'>23.26</td><td class='n'>1,399</td><td class='n'>681</td><td class='n'>4.66</td></tr><tr><td>12</td><td>Meidling</td><td class='n'>8.11</td><td class='n'>420</td><td class='n'>93</td><td class='n'>1.21</td></tr><tr><td>13</td><td>Hietzing</td><td class='n'>37.71</td><td class='n'>417</td><td class='n'>69</td><td class='n'>0.97</td></tr><tr><td>14</td><td>Penzing</td><td class='n'>33.76</td><td class='n'>661</td><td class='n'>127</td><td class='n'>1.05</td></tr><tr><td>15</td><td>Rudolfsheim-Fünfhaus</td><td class='n'>3.92</td><td class='n'>66</td><td class='n'>39</td><td class='n'>0.46</td></tr><tr><td>16</td><td>Ottakring</td><td class='n'>8.67</td><td class='n'>149</td><td class='n'>23</td><td class='n'>0.50</td></tr><tr><td>18</td><td>Währing</td><td class='n'>6.35</td><td class='n'>158</td><td class='n'>26</td><td class='n'>0.72</td></tr><tr><td>19</td><td>Döbling</td><td class='n'>24.94</td><td class='n'>702</td><td class='n'>108</td><td class='n'>1.52</td></tr><tr><td>20</td><td>Brigittenau</td><td class='n'>5.71</td><td class='n'>85</td><td class='n'>47</td><td class='n'>1.11</td></tr><tr><td>21</td><td>Floridsdorf</td><td class='n'>44.44</td><td class='n'>1,910</td><td class='n'>529</td><td class='n'>1.75</td></tr><tr><td>22</td><td>Donaustadt</td><td class='n'>102.30</td><td class='n'>6,595</td><td class='n'>1,728</td><td class='n'>6.31</td></tr><tr><td>23</td><td>Liesing</td><td class='n'>32.06</td><td class='n'>1,165</td><td class='n'>431</td><td class='n'>1.62</td></tr></tbody></table>
+<div class="sub" style="font-size:12px">The false-positive rate is measured on
+the footprints that already showed a building in the 2014 orthophoto. It is an
+upper bound, because a new floor on an old building is real construction that
+the test cannot distinguish from a spurious firing.</div></div>
+<div class="warn"><b>The series is a floor.</b> The detector fires on about six
+per cent of the footprints that actually changed in a district it has never
+seen, at the frozen setting, and on about a fifth when the false-positive
+guarantee is spent on sensitivity. A district with no detections is therefore
+not a district without construction.</div>
+</div>
